@@ -1,0 +1,233 @@
+@import "../fonts/iconfont.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: "微软雅黑", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+/*2.添加新的样式*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.m_left10 {
+  margin-left: 10px;
+}
+.m_right10 {
+  margin-right: 10px;
+}
+.m_top10 {
+  margin-top: 10px;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+#header {
+  height: 50px;
+  background-color: #ff841d;
+  padding: 5px;
+  text-align: center;
+}
+#header .back {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+#header > h4 {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+#header .logo {
+  margin-left: 5px;
+  padding: 12px;
+  width: 75%;
+}
+#header .logo > a {
+  display: block;
+}
+#header .logo > a > img {
+  height: 25px;
+}
+#header .app {
+  padding: 7px;
+}
+#header .app img {
+  height: 34px;
+}
+#search {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  position: relative;
+}
+#search .searchbox {
+  padding: 10px;
+}
+#search .searchbox > input {
+  height: 30px;
+  width: 90%;
+  padding-left: 5%;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  border: none;
+  font-size: 16px;
+}
+#search .button > button {
+  width: 63px;
+  height: 30px;
+  background: #ff841d;
+  border-radius: 15px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+}
+#search .button > button::before {
+  content: '搜索';
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+}
+#nav > .container > .row div {
+  text-align: center;
+  padding-top: 20px;
+}
+#nav > .container > .row div > a > span > img {
+  height: 50px;
+}
+#discount {
+  background-color: #ff9000;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+}
+#discount span {
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+#discount img {
+  text-align: right;
+  height: 20px;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+#product li {
+  padding: 10px 8px;
+}
+#product li a {
+  display: block;
+}
+#product li a .img img {
+  width: 100px;
+  height: 100px;
+  padding-right: 10px;
+}
+#product li a i {
+  font-size: 13px;
+}
+#product li a .infoR {
+  padding-left: 90px;
+}
+#product li a .infoR > .title h4 {
+  color: #333333;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+  text-align: left;
+  font-weight: normal;
+}
+#product li a .infoR > .title h4 > span {
+  color: #ff6c00;
+}
+#product li a .infoR em {
+  font-style: normal;
+}
+#footer {
+  background-color: #f4f4f4;
+}
+#footer > .more {
+  height: 50px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+#footer > .more > a {
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+}
+#footer .chart {
+  background-color: #ff9000;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+#footer .chart .chart_in {
+  color: #fff;
+  display: inline-block;
+  font: bolder 18px/35px "Microsoft soft";
+  padding-left: 10px;
+}
+#footer .chart .more {
+  line-height: 35px;
+  padding-right: 10px;
+}
+#footer .chart .more > img {
+  width: 20px;
+  height: 20px;
+}
+#footer .row {
+  height: 36px;
+  margin-top: 10px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+#footer .row a {
+  display: block;
+}
+#footer .row a div {
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}

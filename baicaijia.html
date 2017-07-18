@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <!--引入less文件-->
+    <link rel="stylesheet/less" href="./css/baicaijia.css">
+    <!--引入解析less文件的js文件-->
+    <script src="./js/less.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/template.js"></script>
+
+    <title>白菜价</title>
+</head>
+<body>
+<header id="header">
+    <a href="index.html" class="back fl"><</a>
+    <h4>白菜价-淘宝内部优惠券</h4>
+    <div class="app fr">
+        <a href="">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<nav class="">
+    <!--<a class="all">全部</a>-->
+    <div class="marsk clearfix">
+        <ul class="navList">
+            <li>恭喜你中奖了</li>
+        </ul>
+    </div>
+</nav>
+<section id="product">
+    <ul class="info">
+        <li>
+            <a href="" class="clearfix im">
+                <div class="img fl">
+                    <img src="images/ic_mall.png" alt="">
+                </div>
+                <div class="infoR">
+                    <div class="title">
+                        <h4>我是的家乐福考记录累计收到了飞机快两点</h4>
+                        <div class="price">
+                            <span>
+                                券后
+                            </span>
+                            <i>&nbsp;&nbsp;¥</i>
+                            <span>
+                                998.0
+                            </span>
+                            <del>
+                                1888.0
+                            </del>
+                        </div>
+                    </div>
+                    <div class="down">
+                        <div class="bar">
+                            <div class="bar_in">
+                                0%
+                            </div>
+                        </div>
+                        <span class="yiling">已领0/剩余72</span>
+                        <div class="click">
+                            <div class="left">
+                                点此领取优惠券
+                            </div>
+                            <div class="right">
+                                下单链接
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+</section>
+<section id="footer">
+    <div class="more">
+        <a href="">
+            更多优惠信息>>
+        </a>
+    </div>
+    <div class="chart clearfix">
+        <span class="chart_in fl">品牌排行</span>
+        <span class="more fr">
+            <img src="images/more.png" alt="">
+        </span>
+    </div>
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <a href="">
+                    <div class="col-xs-3">登入</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-4">注册</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-5">返回顶部</div>
+                </a>
+                <span></span>
+            </div>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+</section>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+
+<!--<script src="js/moneyctr.js"></script>-->
+<script src="js/baicaijia.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/html" id="nav_1">
+    {{each result as value}}
+    <li data-titleid="{{value.titleId}}">{{value.title}}</li>
+    {{/each}}
+</script>
+<script type="text/html" id="product_1">
+    {{each result as value}}
+    <li>
+        <a href="" class="clearfix im">
+            <div class="img fl">
+                {{#value.productImg}}
+            </div>
+            <div class="infoR">
+                <div class="title">
+                    <h4>
+                        {{#value.productName}}
+
+                    </h4>
+                    <div class="price">
+                        {{#value.productPrice}}
+                        <del>
+                            1888.0
+                        </del>
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="bar">
+                        <div class="bar_in">
+                            0%
+                        </div>
+                    </div>
+                    <span class="yiling">已领0/剩余72</span>
+                    <div class="click">
+                        <div class="left">
+                            点此领取优惠券
+                        </div>
+                        <div class="right">
+                            下单链接
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+</html>

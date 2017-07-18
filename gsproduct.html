@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.css">
+    <link rel="stylesheet/less" href="css/index.css">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <!--引入less文件-->
+    <link rel="stylesheet/less" href="./css/gsproduct.css">
+    <!--引入解析less文件的js文件-->
+    <script src="./js/less.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/template.js"></script>
+
+    <title>凑单品</title>
+</head>
+<body>
+<header id="header">
+    <a href="index.html" class="back fl"><</a>
+    <h4>凑单品</h4>
+    <div class="app fr">
+        <a href="">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<div class="cityNav ">
+    <div class="cityInfo">
+        <div class="shop">
+            <span>京东</span>
+            <span>▼</span>
+        </div>
+        <div class="place">
+            <span>华北</span>
+            <span>▼</span>
+        </div>
+        <div class="price">
+            免费区
+        </div>
+        <i>
+            <div></div>
+            <div></div>
+            <div></div>
+        </i>
+    </div>
+</div>
+<div class="from">
+    <ul class="infoB clearfix">
+        <li>一号店</li>
+        <li>一号店</li>
+        <li>一号店</li>
+    </ul>
+</div>
+<section id="product">
+    <ul class="info clearfix">
+        <li>
+            <a href="">
+                <img src="" alt="">
+                <div class="title">西域美农新疆大枣特产五星红枣我了个草?</div>
+                <p class="price">19.8元(5件99元)</p>
+                <!--<span>去凑单</span>-->
+            </a>
+        </li>
+    </ul>
+</section>
+<section id="footer">
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <a href="">
+                    <div class="col-xs-3">登入</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-4">注册</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-5">返回顶部</div>
+                </a>
+                <span></span>
+
+            </div>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+</section>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/gsproduct.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/html" id="shop">
+    {{each result as value}}
+    <li data-shopid="{{value.shopId}}">{{value.shopName}}</li>
+    {{/each}}
+</script>
+<script type="text/html" id="area">
+    {{each result as value}}
+    <li data-areaid="{{value.areaId}}">{{value.areaName}}</li>
+    {{/each}}
+</script>
+<script type="text/html" id="productList">
+{{each result as value}}
+<li>
+    <a href="">
+        <img src="{{value.productImg}}" alt="">
+        <div class="title">{{value.productName}}</div>
+        <p class="price">{{value.productPrice}}</p>
+        <!--<span>去凑单</span>-->
+    </a>
+</li>
+    {{/each}}
+</script>
+</html>

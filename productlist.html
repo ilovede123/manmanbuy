@@ -1,0 +1,142 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.css">
+    <link rel="stylesheet/less" href="css/index.css">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <!--引入less文件-->
+    <link rel="stylesheet/less" href="./css/index.css">
+    <!--引入解析less文件的js文件-->
+    <script src="./js/less.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<header id="header">
+    <div class="fl logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="app fr">
+        <a href="">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<section id="search">
+    <div class="searchbox">
+        <input type="text" name="" placeholder="请输入你想比价的产品">
+    </div>
+    <div class="button">
+        <button></button>
+    </div>
+</section>
+<nav id="subNav" class="productlist clearfix">
+    <a href="index.html" class="fl">首页></a>
+    <a href="" class="fl">电视></a>
+    <a href="" class="meau4 fl">占位</a>
+    <a href="" id="botton" class="fr">筛选</a>
+</nav>
+<main>
+    <div class="info">
+        <div class="pic"></div>
+        <div class="title"></div>
+        <div class="count cantainer">
+            <div class="row">
+                <div class="col-xs-6">
+                    <span>当前最低</span>
+                    <span>¥6000</span>
+                </div>
+                <div class="col-xs-6">
+                    <span>优选评论</span>
+                    <span>8266条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="makeprice"></div>
+    <div class="comment">
+        <h4>网友评价</h4>
+        <div class="content clearfix">
+            <div class="up clearfix">
+                <span class="id fl">i******3</span>
+                <span class="time fr">2016/07/12</span>
+            </div>
+            <div class="content_in"></div>
+            <div class="form fr">
+                <span>购买自:</span>
+                <span>京东商城</span>
+            </div>
+        </div>
+    </div>
+</main>
+<section id="footer">
+    <div class="more">
+        <a href="">
+            查看更多评价
+        </a>
+    </div>
+    <div class="chart clearfix">
+        <span class="chart_in fl">品牌排行</span>
+        <span class="more fr">
+            <img src="images/more.png" alt="">
+        </span>
+    </div>
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <a href="">
+                    <div class="col-xs-3">登入</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-4">注册</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-5">返回顶部</div>
+                </a>
+                <span></span>
+
+
+            </div>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+</section>
+<script src="js/productlist.js"></script>
+<script type="text/html" id="comment">
+{{each result as value}}
+<div class="content clearfix">
+    <div class="up clearfix">
+        <span class="id fl">{{value.comName}}</span>
+        <span class="time fr">{{value.comTime}}</span>
+    </div>
+    <div class="content_in">
+        {{value.comContent}}
+    </div>
+    <div class="form fr">
+        <span>{{value.comFrom}}</span>
+    </div>
+</div>
+    {{/each}}
+</script>
+</body>
+</html>

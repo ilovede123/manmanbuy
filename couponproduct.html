@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <!--引入less文件-->
+    <link rel="stylesheet/less" href="./css/couponproduct.css">
+    <!--引入解析less文件的js文件-->
+    <script src="./js/less.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/template.js"></script>
+
+    <title>优惠券</title>
+</head>
+<body>
+<header id="header">
+    <a href="coupon.html" class="back fl"><</a>
+    <h4>优惠券</h4>
+    <div class="app fr">
+        <a href="javascript:">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<div class="propmpt">
+    --点餐前出示手机中的优惠券，即可享受优惠--
+</div>
+<div class="carousel">
+    <div class="arr">
+        <a href="javascript:" class="arrLeft"><</a>
+        <a href="javascript:" class="arrRight">></a>
+    </div>
+    <div class="marskSm">
+        <i>X</i>
+            <ul class="info">
+
+            </ul>
+        </div>
+
+</div>
+<section id="product">
+    <ul class="info">
+        <li>
+            <a href="" class="clearfix">
+                <div class="img fl">
+                    <img src="images/ic_mall.png" alt="">
+                </div>
+                <div class="infoR">
+                    <div class="title">
+                        <h4>我是的家乐福考记录累计收到了飞机快两点</h4>
+                    </div>
+                    <div class="other">
+                        <h4 class="price">
+                            <i>¥</i>
+                            999.99
+                        </h4>
+                        <div class="mall fl">有效期至</div>
+                    </div>
+
+                </div>
+            </a>
+        </li>
+
+    </ul>
+</section>
+<section id="footer">
+    <div class="more">
+        <a href="">
+            更多优惠信息>>
+        </a>
+    </div>
+    <div class="chart clearfix">
+        <span class="chart_in fl">品牌排行</span>
+        <span class="more fr">
+            <img src="images/more.png" alt="">
+        </span>
+    </div>
+    <div class="login">
+        <div class="container">
+            <div class="row " >
+                <a href="">
+                    <div class="col-xs-3">登入</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-4">注册</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-5">返回顶部</div>
+                </a>
+                <span></span>
+
+
+            </div>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+</section>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+
+<!--<script src="js/moneyctr.js"></script>-->
+<script src="js/couponproduct.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/html" id="couponproduct">
+{{each result as value i}}
+<li data-index="{{i}}">
+    <a href="javascript:;" class="clearfix">
+        <div class="img fl">
+            {{#value.couponProductImg}}
+        </div>
+        <div class="infoR">
+            <div class="title">
+                <h4>{{value.couponProductName}}</h4>
+            </div>
+            <div class="other">
+                <h4 class="price">
+                   {{value.couponProductPrice}}
+                </h4>
+                <div class="mall fl">{{value.couponProductTime}}</div>
+            </div>
+
+        </div>
+    </a>
+</li>
+    {{/each}}
+</script>
+<script type="text/html" id="carousel_1">
+{{each result as value}}
+    <li>{{#value.couponProductImg}}</li>
+    {{/each}}
+</script>
+
+</html>

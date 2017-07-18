@@ -1,0 +1,252 @@
+@import "../fonts/iconfont.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: "微软雅黑", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+/*2.添加新的样式*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.m_left10 {
+  margin-left: 10px;
+}
+.m_right10 {
+  margin-right: 10px;
+}
+.m_top10 {
+  margin-top: 10px;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+#header {
+  height: 50px;
+  background-color: #f4483e;
+  padding: 5px;
+  text-align: center;
+}
+#header .back {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+#header > h4 {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bolder;
+  color: #ffffff;
+  line-height: 40px;
+  margin-left: 20px;
+  padding: 0;
+}
+#header .logo {
+  margin-left: 5px;
+  padding: 12px;
+  width: 75%;
+}
+#header .logo > a {
+  display: block;
+}
+#header .logo > a > img {
+  height: 25px;
+}
+#header .app {
+  padding: 7px;
+}
+#header .app img {
+  height: 34px;
+}
+.propmpt {
+  font-size: 12px;
+  color: #999;
+  margin: 8px 0;
+  text-align: center;
+}
+#product li {
+  padding: 10px 8px;
+}
+#product li a {
+  display: block;
+}
+#product li a .img img {
+  width: 100px;
+  height: 80px;
+  padding-right: 10px;
+}
+#product li a .infoR {
+  padding-left: 90px;
+}
+#product li a .infoR > .title h4 {
+  color: #333333;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+  text-align: left;
+  font-weight: normal;
+}
+#product li a .infoR i {
+  font-size: 13px;
+  font-style: normal;
+}
+#product li a .infoR .mall {
+  font-size: 14px;
+  color: #EE7700;
+}
+#footer {
+  background-color: #f4f4f4;
+}
+#footer > .more {
+  height: 50px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+#footer > .more > a {
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+}
+#footer .chart {
+  background-color: #ff9000;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+#footer .chart .chart_in {
+  color: #fff;
+  display: inline-block;
+  font: bolder 18px/35px "Microsoft soft";
+  padding-left: 10px;
+}
+#footer .chart .more {
+  line-height: 35px;
+  padding-right: 10px;
+}
+#footer .chart .more > img {
+  width: 20px;
+  height: 20px;
+}
+#footer .row {
+  height: 36px;
+  margin-top: 10px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+#footer .row a {
+  display: block;
+}
+#footer .row a div {
+  position: static;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+.carousel {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-1000px);
+}
+.carousel .marskSm {
+  z-index: 1;
+  position: relative;
+  width: 200px;
+  height: 180px;
+  margin: 70% auto;
+  overflow: hidden;
+  top: 0;
+}
+.carousel .marskSm li {
+  list-style: none;
+  float: left;
+}
+.carousel .marskSm li img {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+.carousel .marskSm i {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-style: normal;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 30px;
+}
+.carousel .arr {
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  margin: 70% 26%;
+}
+.carousel .arr .arrLeft,
+.carousel .arr .arrRight {
+  position: absolute;
+  height: 80px;
+  width: 50px;
+  background-color: rgba(25, 25, 25, 0.6);
+  font-size: 50px;
+  text-align: center;
+  line-height: 80px;
+}
+.carousel .arr .arrRight {
+  right: -50px;
+  bottom: 50%;
+  margin-bottom: -40px;
+}
+.carousel .arr .arrLeft {
+  left: -50px;
+  bottom: 50%;
+  margin-bottom: -40px;
+}

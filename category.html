@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/category.css">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <!--引入less文件-->
+    <link rel="stylesheet/less" href="./css/index.css">
+    <!--引入解析less文件的js文件-->
+    <script src="./js/less.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/template.js"></script>
+    <title>比价搜索</title>
+</head>
+<body>
+<header id="header">
+    <div class="fl logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="app fr">
+        <a href="">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<section id="search">
+    <div class="searchbox">
+        <input type="text" name="" placeholder="请输入你想比价的产品">
+    </div>
+    <div class="button">
+        <button></button>
+    </div>
+</section>
+<main>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                       aria-expanded="true" aria-controls="collapseOne">
+                        <span>内容</span>
+                        <i class="fr">向上箭头</i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-3">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<section id="footer">
+    <div class="more">
+        <a href="">
+            更多优惠信息>>
+        </a>
+    </div>
+    <div class="chart clearfix">
+        <span class="chart_in fl">品牌排行</span>
+        <span class="more fr">
+            <img src="images/more.png" alt="">
+        </span>
+    </div>
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <a href="">
+                    <div class="col-xs-3">登入</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-4">注册</div>
+                </a>
+                <a href="">
+                    <div class="col-xs-5">返回顶部</div>
+                </a>
+                <span></span>
+            </div>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+        <div class="content_b">
+            <p>
+                <a href="#">
+                    手机APP下载
+                </a>
+                <a href="#">
+                    慢慢买手机版
+                </a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+</section>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/html" id="product">
+    {{each result as value i}}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{i}}">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-titleId="{{i}}" data-parent="#accordion"
+                   href="#collapse{{i}}" aria-expanded="true" aria-controls="collapse{{i}}">
+                    <span>{{value.title}}</span>
+                    <i class="fr">▼</i>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{i}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading{{i}}">
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="product_1">
+    {{each result as value}}
+    <div class="col-xs-3"><a href="bijia.html?title={{value.category}}&categoryid={{value.categoryId}}">{{value.category}}</a>
+    </div>
+    {{/each}}
+</script>
+
+</body>
+</html>
